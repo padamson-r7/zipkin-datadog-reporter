@@ -2,6 +2,8 @@ language: java
 jdk:
 - openjdk10
 before_install:
+- rm "${JAVA_HOME}/lib/security/cacerts"
+- ln -s /etc/ssl/certs/java/cacerts "${JAVA_HOME}/lib/security/cacerts"
 - openssl aes-256-cbc -K $encrypted_37f1de5b0224_key -iv $encrypted_37f1de5b0224_iv
   -in codesigning.asc.enc -out codesigning.asc -d
 cache:
