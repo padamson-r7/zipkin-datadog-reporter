@@ -7,7 +7,7 @@
     <groupId>io.smartup.zipkin</groupId>
     <artifactId>zipkin-datadog-reporter</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <name>Aggregator of Zipkin DataDog Reporter</name>
     <description>Aggregator of Zipkin DataDog Reporter</description>
@@ -33,6 +33,11 @@
         </repository>
     </distributionManagement>
 
+    <scm>
+        <url>https://github.com/smartupio/zipkin-datadog-reporter</url>
+        <connection>scm:git:git@github.com:smartupio/zipkin-datadog-reporter.git</connection>
+    </scm>
+
     <developers>
         <developer>
             <id>ambrusadrianz</id>
@@ -41,11 +46,6 @@
             <url>https://www.smartup.io</url>
         </developer>
     </developers>
-
-    <scm>
-        <url>https://github.com/smartupio/zipkin-datadog-reporter</url>
-        <connection>scm:git:git@github.com:smartupio/zipkin-datadog-reporter.git</connection>
-    </scm>
 
     <modules>
         <module>zipkin-datadog-reporter-parent</module>
