@@ -119,12 +119,11 @@ class DDApi {
                 while ((line = responseReader.readLine()) != null) {
                     sb.append(line);
                 }
+                skipAllContent(httpCon);
                 responseReader.close();
 
                 responseString = sb.toString();
             }
-
-            skipAllContent(httpCon);
 
             final int responseCode = httpCon.getResponseCode();
             if (responseCode != 200) {

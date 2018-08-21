@@ -136,8 +136,8 @@ public class DDMappingSpan {
 
     @JsonGetter
     public String getType() {
-        if (delegateSpan == null) {
-            return "queue";
+        if (delegateSpan.kind() == null) {
+            return "other";
         }
         switch (delegateSpan.kind()) {
             case CONSUMER:
