@@ -120,9 +120,9 @@ public class DDMappingSpan {
 
     @JsonGetter("name")
     public String getOperationName() {
-        // DataDog does not support traces without names without alphanumerical characters
+        // DataDog does not support trace names without alphanumerical characters
 
-        return sanitizeName(delegateSpan.name());
+        return getType() + " " + delegateSpan.name();
     }
 
     @JsonGetter("sampling_priority")
@@ -175,9 +175,5 @@ public class DDMappingSpan {
     @Override
     public String toString() {
         return delegateSpan.toString();
-    }
-
-    private String sanitizeName(String name) {
-        return name.matches("[^A-Za-z0-9 ]") ? getType() + " " + name : name;
     }
 }
